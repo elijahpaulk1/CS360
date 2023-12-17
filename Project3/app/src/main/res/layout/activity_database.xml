@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- GridView Declaration -->
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="5dp"
+        android:horizontalSpacing="5dp"
+        android:columnWidth="100dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center" />
+
+    <!-- Button to add a new item to the database -->
+    <Button
+        android:id="@+id/btnAddItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gridView"
+        android:layout_marginTop="16dp"
+        android:text="Add Item"
+        android:onClick="addItemToDatabase" />
+
+    <!-- Button to delete an item from the database -->
+    <Button
+        android:id="@+id/btnDeleteItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAddItem"
+        android:layout_marginTop="16dp"
+        android:text="Delete Item"
+        android:onClick="deleteItemFromDatabase" />
+
+    <!-- Button to update an item in the database -->
+    <Button
+        android:id="@+id/btnUpdateItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnDeleteItem"
+        android:layout_marginTop="16dp"
+        android:text="Update Item"
+        android:onClick="updateItemInDatabase" />
+    <Button
+        android:id="@+id/buttonSendSms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gridView"
+        android:layout_marginTop="16dp"
+        android:text="Send SMS Notification"
+        android:onClick="sendSmsNotification" />
+
+    <EditText
+        android:id="@+id/editTextPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSendSms"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Phone Number" />
+
+</RelativeLayout>
